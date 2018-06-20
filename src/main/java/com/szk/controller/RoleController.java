@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import com.szk.service.RoleService;
 import com.szk.vo.Role;
@@ -29,8 +30,11 @@ public class RoleController {
 			
 		role = roleService.getRole(id);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("roleDetails");
+		//mv.setViewName("roleDetails");
 		mv.addObject("role", role);
+		// 返回json格式的数据
+		mv.setViewName("json");
+		mv.setView(new MappingJackson2JsonView());
 		return mv;
 		
 	}

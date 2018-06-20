@@ -19,6 +19,8 @@
 		<junit.version>4.12</junit.version>
 		<!-- aspectj 版本号 -->
 		<aspectj.version>1.5.4</aspectj.version>
+		<!-- jackson 版本号 -->
+		<jackson.version>2.7.4</jackson.version>
   </properties>
 
   <dependencies>
@@ -126,11 +128,7 @@
     	<version>1.2.3</version>
     </dependency>
     
-    <!-- <dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>javax.servlet-api</artifactId>
-	    <version>3.1.0</version>
-	</dependency> -->
+    
 	<dependency>  
         <groupId>org.apache.geronimo.specs</groupId>  
         <artifactId>geronimo-servlet_2.4_spec</artifactId>  
@@ -158,6 +156,23 @@
 	    <artifactId>jstl</artifactId>
 	    <version>1.2</version>
 	</dependency>
+	
+	<!-- Jackson的支持 -->
+	<dependency>    
+	    <groupId>com.fasterxml.jackson.core</groupId>    
+	    <artifactId>jackson-core</artifactId>    
+	    <version>${jackson.version}</version>  
+	</dependency>    
+	<dependency>    
+	    <groupId>com.fasterxml.jackson.core</groupId>    
+	    <artifactId>jackson-databind</artifactId>    
+	    <version>${jackson.version}</version>    
+	</dependency>    
+	<dependency>    
+	    <groupId>com.fasterxml.jackson.core</groupId>    
+	    <artifactId>jackson-annotations</artifactId>    
+	    <version>${jackson.version}</version>  
+	</dependency>  
     
   </dependencies>
 
